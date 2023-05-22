@@ -1,0 +1,44 @@
+﻿@using BizLand.ViewModels;
+
+@model RegisterVM
+
+<div class="col-sm-6 col-xl-6 mt-5 mb-4 mx-auto">
+    <div class="bg-secondary rounded h-20 p-4">
+        <h6 class="mb-4">Basic Form</h6>
+        <form method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+            </div>  <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input asp-for="Name" class="form-control" id="Name">
+                <span asp-validation-for="Name"></span>
+
+            </div>  <div class="mb-3">
+                <label for="Surname" class="form-label">Surname</label>
+                <input asp-for="Surname" class="form-control" id="Surnmae">
+                <span asp-validation-for="Surname"></span>
+            </div>
+            <div class="mb-3">
+                <label for="UserName" class="form-label">UserName</label>
+                <input asp-for="UserName" class="form-control" id="UserName">
+                <span asp-validation-for="UserName"></span>
+
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input asp-for="Password" class="form-control" id="Password">
+                <span asp-validation-for="Password"></span>
+
+            </div>  <div class="mb-3">
+                <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                <input asp-for="ConfirmPassword" class="form-control" id="ConfirmPassword">
+                <span asp-validation-for="ConfirmPassword"></span>
+
+            </div>
+           <div asp-validation-summary="ModelOnly" style="color:blueviolet;"></div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+</div>

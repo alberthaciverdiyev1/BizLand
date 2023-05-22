@@ -1,0 +1,52 @@
+﻿@using BizLand.Models;
+@model TeamMember
+
+<div class="col-sm-6 col-md-6 mt-5 mb-4 mx-auto">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Basic Form</h6>
+        <form method="post" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input asp-for="Name" class="form-control" id="Name" value="@Model.Name">
+            </div>
+            <div class="mb-3">
+                <label for="Surname" class="form-label">Surname</label>
+                <input asp-for="Surname" class="form-control" id="Surname" value="@Model.Surname">
+            </div>
+            <div class="mb-3">
+                <label for="Profession" class="form-label">Profession</label>
+                <input asp-for="Profession" class="form-control" id="Profession" value="@Model.Profession">
+            </div>
+            <div class="mb-3">
+                <img src="~/assets/img/team/@Model.ImageUrl"/>
+            </div>
+            <div class="mb-3">
+                <label for="Photo" class="form-label">Photo</label>
+                <input asp-for="Photo" class="form-control" id="Photo">
+            </div>
+            <div class="mb-3">
+                <label for="facebook" class="form-label">Facebook</label>
+                <input asp-for="FacebookUrl" class="form-control" id="facebook" value="@Model.FacebookUrl">
+            </div>
+            <div class="mb-3">
+                <label for="instagram" class="form-label">Instagram</label>
+                <input asp-for="InstagramUrl" class="form-control" id="insatgram" value="@Model.InstagramUrl">
+            </div>
+            <div class="mb-3">
+                <label for="Twitter" class="form-label">Twitter</label>
+                <input asp-for="TwitterUrl" class="form-control" id="Twitter" value="@Model.TwitterUrl">
+            </div>
+            <div class="mb-3">
+                <label for="Linkdein" class="form-label">LinkdeIn</label>
+                <input asp-for="LinkdeInUrl" class="form-control" id="Linkdein" value="@Model.LinkdeInUrl">
+            </div>
+
+
+
+
+
+            <button type="submit" class="btn btn-primary">Add User</button>
+        </form>
+    </div>
+</div>
